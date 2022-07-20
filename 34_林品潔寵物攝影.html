@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./_css/bootstrap.min.css">
+    <script src="./_js/jquery.min.js"></script>
+    <script src="./_js/popper.min.js"></script>
+    <script src="./_js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@900&display=swap');
+
+        body{
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+
+            transition: background-color 1s;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .dogMovie {
+            /* width: 1280px;
+            height: 720px; */
+            margin: auto;
+            /* 置中關鍵呀關鍵 */
+            text-align: center;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+
+        .sticky+.content {
+            padding-top: 0px;
+        }
+
+
+        .rect {
+            width: 100%;
+            height: 100vh;
+        }
+
+        #green {
+            background-color: #559065;
+        }
+
+        #blue {
+            background-color: #7eb3a7;
+        }
+
+        .h-page-detail {
+            padding: 0;
+            margin: 0;
+            /* 置中關鍵呀關鍵 */
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .h-page-detail2{
+            display: none;
+            margin-top: 0px;
+        }
+        @media screen and (max-width: 992px) {
+            
+
+            .h-page-detail {
+                /* width: 896px;
+                height: 504px; */
+                display: none;
+            }
+            .h-page-detail2{
+                display: block;
+                margin: auto
+                
+            }
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@900&display=swap');
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+
+        #logofont {
+            /* font-family: 'Noto Sans TC', sans-serif; */
+            font-family: 'cwTeXKai', sans-serif;
+            color: black;
+        }
+
+        .rect {
+            padding: 50px;
+        }
+
+        .img_dog1 {
+
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1.00);
+            display: block;
+
+        }
+
+        .content1 {
+            display: flex;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            width: 100px;
+            padding: 1px;
+            margin: top 100px;
+            ;
+            background-color: #559065;
+            color: black;
+            border: 2px solid #08222b;
+        }
+
+        .content1.button1:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .content5-2 {
+            border-radius: 5px;
+            box-shadow: 10px 0 10px rgba(0, 0, 0, 1.00);
+            /* display: block; */
+            height: auto;
+            padding: 0px;
+            margin-right: 10px;
+
+        }
+
+
+        #ee {
+            font-family: 'Noto Serif TC', serif text
+        }
+
+
+        .goodsPrice {
+            background-color: #7eb3a7;
+            /* width: 500px;
+            height: 800px; */
+        }
+
+        /* .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            flex-grow: 1;
+            margin: 15px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <div class="header">
+            <!-- <h2>Scroll Down</h2>
+            <p>Scroll down to see the sticky effect.</p> -->
+            <div class="row dogMovie">
+                <div class="col-12">
+                    <video muted autoplay="autoplay" loop="loop" width="70%" allowFullScreen="true">
+                        <!-- muted 放了影片就會自動撥放了 -->
+                        <source src="./picture/dog_title.mp4">
+                        <source src="./picture/dog_title.avi">
+                    </video>
+                </div>
+            </div>
+
+
+        </div>
+        <div>
+            <!-- <div id="navbar"> -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#"> <img src="./picture/Log 2.png" width="80" height="80"
+                        class="d-inline-block align-top" alt="">
+                    <img src="./picture/Logo_font.png" width="250" height=""></a>
+                <!-- <h4 id="logofont">阿咪咩寵物攝影坊</h4> -->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">首頁<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#aa">寵物寫真</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cc">寵物似顏繪</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dd">價目表</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ee">關於我們</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <div id="aa">
+                <div class="rect " id="green" id="pg1">
+                    <!-- 原本有一個row但是空格所以我刪掉了 -->
+                    <div class="headline">
+
+                        <br>
+                        <h1 style="font-family:'Noto Serif TC', serif;">寵物寫真｜生活剪輯</h1>
+                    </div>
+                    <div>
+                        <p class="tagline">
+                            &emsp; 您與毛寶貝的回憶，我們為您
+                            <span class="punchline" style="font-size: larger;">保存.</span>
+                        </p>
+                        <script>       //  ScrollReveal測試滑動浮現 
+
+                            ScrollReveal({
+                                reset: true,
+                                distance: "60px",
+                                duration: 2500,
+                                delay: 400
+                            });
+                            ScrollReveal().reveal('.headline', { delay: 1000, origin: 'left' });
+                            ScrollReveal().reveal('.tagline', { delay: 1500 });
+                            ScrollReveal().reveal('.punchline', { delay: 2000 });</script>
+                        <div class="content1 col-9">
+                            <div class="col-6">
+                                <br>
+                                <img class="img_dog1 img-fluid" src="./picture/Incredibly Expressive Dog2.jpg" alt="">
+                            </div>
+                            <div class="col-8" style="text-decoration:  text-align; right: -90px; line-height:350px;">
+                                <p>讓毛孩的照片成為家中牆上最美的一幅作品</p>
+                                <p id="demo"></p>
+                            </div>
+                            <div><button onclick="booking2()" class="button1 w3-round-xlarge">立即預約</button>
+                                <script>
+                                    // 預約沒反應
+                                    function booking2() {
+                                        document.getElementById("demo").innerHTML = "Hello World";
+                                    }
+                                </script>
+                            </div>
+
+                            <script>       //  ScrollReveal測試滑動浮現 
+
+
+
+                                ScrollReveal({
+                                    reset: true,
+                                    distance: "60px",
+                                    duration: 2500,
+                                    delay: 400
+                                });
+
+                                ScrollReveal().reveal('.content1', { delay: 500, origin: 'left' });
+                            </script>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rect content2" id="blue">
+                <h2 style="font-family: 'Noto Serif TC', serif">
+                    收藏您與寶貝的點滴
+                </h2>
+                
+                <!--阿咪五連播放 -->
+                <div>
+                    <div class="h-page-detail">
+
+                        <style>
+                            .user_jy47_011 {
+                                background-color: #8AEDD1;
+                                height: 402px;
+                                width: 990px;
+                                margin: 0 auto;
+                                text-align: center;
+                                overflow: hidden;
+
+                            }
+
+                            .user_jy47_011 .cnet {
+                                margin: 0 auto;
+                                text-align: center;
+                                margin-left: auto;
+                                margin-right: auto;
+                                width: auto;
+
+                            }
+
+                            .user_jy47_011 .cnet:hover {
+                                margin: 0 auto;
+                                text-align: center;
+                                -moz-transition: 0.4s;
+                                -webkit-transition: 0.4s;
+                                -o-transition: 0.4s;
+                                transition: 0.4s;
+                            }
+
+                            .user_jy47_011 a {
+                                float: left;
+                                height: 402px;
+                                width: 185px;
+                                -moz-transition: 0.4s;
+                                -webkit-transition: 0.4s;
+                                -o-transition: 0.4s;
+                                transition: 0.4s;
+                            }
+
+                            .user_jy47_011 .cnet:hover a {
+                                float: left;
+                                height: 402px;
+                                width: 185px;
+                                -moz-transition: 0.4s;
+                                -webkit-transition: 0.4s;
+                                -o-transition: 0.4s;
+                                transition: 0.4s;
+                                filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+                                opacity: 0.5;
+                            }
+
+                            .user_jy47_011 .bh1 {
+                                background: url(./picture/DOG1_small.jpg) no-repeat;
+                                width: 198px;
+                            }
+
+                            .user_jy47_011 .cnet .bh1:hover {
+                                background: url(./picture/DOG1_big.jpg) no-repeat;
+                                width: 250px;
+                                filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+                                opacity: 1;
+                            }
+
+                            .user_jy47_011 .bh2 {
+                                background: url(./picture/DOG2_small.jpg) no-repeat;
+                                width: 198px;
+                            }
+
+                            .user_jy47_011 .cnet .bh2:hover {
+                                background: url(./picture/DOG2_big.jpg) no-repeat;
+                                width: 250px;
+                                filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+                                opacity: 1;
+                            }
+
+                            .user_jy47_011 .bh3 {
+                                background: url(./picture/DOG3_small.jpg) no-repeat;
+                                width: 198px;
+                            }
+
+                            .user_jy47_011 .cnet .bh3:hover {
+                                background: url(./picture/DOG3_big.jpg) no-repeat;
+                                width: 250px;
+                                filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+                                opacity: 1;
+                            }
+
+                            .user_jy47_011 .bh4 {
+                                background: url(./picture/DOG4_small.jpg) no-repeat;
+                                width: 198px;
+                            }
+
+                            .user_jy47_011 .cnet .bh4:hover {
+                                background: url(./picture/DOG4_big.jpg) no-repeat;
+                                width: 250px;
+                                filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+                                opacity: 1;
+                            }
+
+                            .user_jy47_011 .bh5 {
+                                background: url(./picture/DOG5_big.jpg) no-repeat;
+                                width: 198px;
+                            }
+
+                            .user_jy47_011 .cnet .bh5:hover {
+                                background: url(./picture/DOG5_big.jpg) no-repeat;
+                                width: 250px;
+                                filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+                                opacity: 1;
+                            }
+                        </style>
+
+                        <div class="user_jy47_011">
+                            <div class="cnet">
+                                <div align="center">
+                                    <a href="./picture/DOG1.JPG" target="_blank" class="bh1"
+                                        clstag="jshopmall|keycount|31266725|1"></a>
+                                    <a href="./picture/DOG2.JPG" target="_blank" class="bh2"
+                                        clstag="jshopmall|keycount|31266725|2"></a>
+                                    <a href="./picture/DOG3.JPG" target="_blank" class="bh3"
+                                        clstag="jshopmall|keycount|31266725|3"></a>
+                                    <a href="./picture/DOG4.JPG" target="_blank" class="bh4"
+                                        clstag="jshopmall|keycount|31266725|4"></a>
+                                    <a href="./picture/DOG5.JPG" target="_blank" class="bh5"
+                                        clstag="jshopmall|keycount|31266725|5"></a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- <div class="h-page-detail2 row">
+                    <img src="./picture/Dogwithp2.JPG" class="col-sm-6 figure-img img-fluid" style="overflow: hidden;" alt="">
+                </div> -->
+                <script>
+
+                    ScrollReveal({
+                        reset: true,
+                        distance: "60px",
+                        duration: 2500,
+                        delay: 400
+                    });
+                    ScrollReveal().reveal('.content2', { delay: 1000, origin: 'left' });
+                </script>
+            </div>
+            <div id="cc">
+                <div class="rect" id="green">
+                    <h2 style="font-family: 'Noto Serif TC', serif">
+                        客製化似顏繪
+                    </h2>
+
+                    <style>
+                        .content3 {
+                            padding: 30px;
+                        }
+                    </style>
+
+                    <div class="content3 row">
+                        <div class="content3-1 col-lg-4 col-md-4 col-sm-6 col-xs-12 "
+                            style="background-color: #008CBA;">
+                            <img src="./picture/似顏繪/face2.JPG" class="figure-img img-fluid" alt="">
+                        </div>
+                        <div class="content3-2 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="background-color: #499d7d;">
+                            <img src="./picture/似顏繪/face.JPG" class="figure-img img-fluid" alt="">
+                        </div>
+                        <div class="content3-3 col-lg-4 col-md-4 col-sm-6 col-xs-12" style="background-color: #7d0b7b;">
+                            <img src="./picture/似顏繪/face3.JPG" class="figure-img img-fluid" alt="">
+                        </div>
+
+                        <script>
+                            ScrollReveal({
+                                reset: true,
+                                distance: "60px",
+                                duration: 2500,
+                                delay: 400
+                            });
+
+                            ScrollReveal().reveal('.content3-1', { delay: 1000, origin: 'left' });
+                            ScrollReveal().reveal('.content3-2', { delay: 1500 });
+                            ScrollReveal().reveal('.content3-3', { delay: 2000, origin: 'right' });
+                        </script>
+                    </div>
+                    <div class="content4" style="text-align: right  ">
+                        <h5>用手繪的溫度，美好的瞬間畫為永恆。&emsp; &emsp; </h5>
+                        <p>最低 $300 /組&emsp;&emsp; &emsp; </p>
+
+                        <script>
+                            ScrollReveal({
+                                reset: true,
+                                distance: "60px",
+                                duration: 2500,
+                                delay: 400
+                            });
+
+
+                            ScrollReveal().reveal('.content4', { delay: 1500 });
+                        </script>
+                    </div>
+
+                </div>
+            </div>
+
+            <style>
+                .goodsPrice {
+                    margin: 0 100 0 0;
+                }
+            </style>
+
+            <div id="dd">
+                <style>
+                    .content5 {
+                        padding: 30;
+
+                        overflow: hidden;
+                    }
+                </style>
+
+                <div class="rect row content5" id="blue">
+                    <div class="goodsPrice col-6 content5-1">
+                        <h2 style="font-family: 'Noto Serif TC', serif">
+                            價目表</h2><br>
+                        <style>
+                            .formtext {
+                                font-family: 'Noto Serif TC', serif;
+                            }
+                        </style>
+
+
+                        <form class="formtext" name="form">
+
+                            <h3 style="font-family: 'Noto Serif TC', serif">1.拍攝主題方案(單選)</h3>
+                            <br>
+                            <label>
+                                <input type="radio" value="500" name=main>歌德蘿莉風500元<br />
+                            </label>
+                            <label>
+                                <input type="radio" value="600" name=main>魔境夢遊600元<br />
+                            </label>
+                            <label>
+                                <input type="radio" value="500" name=main>野豬騎士500元<br>
+                            </label>
+                            <label>
+                                <input type="radio" value="400" name=main>危機特工400元<br>
+                            </label>
+                            <label>
+                                <input type="radio" value="450" name=main>西部牛仔450元<br>
+                            </label>
+                            <br>
+                            <h3 style="font-family: 'Noto Serif TC', serif">2.拍攝道具借用(可複選)</h3>
+
+                            <br>
+                            <label>
+                                <input type="checkbox" value="150" name="side">毛孩服裝150元<br>
+                            </label>
+                            <label>
+
+                                <input type="checkbox" value="100" name="side">毛孩道具100元<br>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="150" name="side">家人道具150元<br>
+                            </label>
+                            <br>
+                            <h3 style="font-family: 'Noto Serif TC', serif">3.拍攝加價購(可複選)</h3>
+                            <br>
+
+                            <label>
+                                <input type="checkbox" value="30" name="drink">鑰匙圈30元<br>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="300" name="drink">似顏繪300元<br>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="50" name="drink">全福海報50元<br>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="99" name="drink">紀念馬克杯99元<br>
+                            </label>
+
+                            <input type="reset" value="清除" /> <br />共計
+                            <input type="text" id="total">元
+                            <input onclick="alert('感謝您的訂購')" type="submit" value="送出">
+                        </form>
+
+                        <script>
+                            // 選擇所有的主餐(拍攝方案)
+                            const mainMeals = document.querySelectorAll('input[name="main"]');
+                            // 選擇所有的配餐(道具)
+                            const sideMeals = document.querySelectorAll('input[name="side"]');
+                            // 選擇所有的飲品(加價購)
+                            const drinks = document.querySelectorAll('input[name="drink"]');
+
+                            // 為被選擇到的元素都綁定事件
+                            mainMeals.forEach(function (mainMeal) {
+                                mainMeal.addEventListener("change", refreshTotal);
+                            });
+                            sideMeals.forEach(function (mainMeal) {
+                                mainMeal.addEventListener("change", refreshTotal);
+                            });
+                            drinks.forEach(function (mainMeal) {
+                                mainMeal.addEventListener("change", refreshTotal);
+                            });
+
+                            function refreshTotal(e) {
+                                let total = 0;
+                                // 找出 mainMeals 中有被勾選的項目
+                                mainMeals.forEach(function (mainMeal) {
+                                    if (mainMeal.checked) {
+                                        total += Number(mainMeal.value);
+                                    }
+                                });
+                                sideMeals.forEach(function (sideMeal) {
+                                    if (sideMeal.checked) {
+                                        total += Number(sideMeal.value);
+                                    }
+                                });
+
+                                drinks.forEach(function (drink) {
+                                    if (drink.checked) {
+                                        total += Number(drink.value);
+                                    }
+                                });
+
+                                displayTotal(total);
+                            }
+
+                            // 用來將算好的 total 顯示在 input 欄位中
+                            const totalInput = document.querySelector("#total");
+                            function displayTotal(total) {
+                                totalInput.value = total;
+                            }
+
+                            // 清除
+                            // 選擇所有 input 元素
+                            const inputAll = document.querySelectorAll("input");
+                            function resetAll() {
+                                inputAll.checked = false;
+                            }
+
+                        </script>
+                    </div>
+
+                    <div class="col-5 content5-2 "><img src="./picture/Dogwithp.JPG" class="figure-img img-fluid"
+                            alt=""></div>
+
+                    <script>
+                        ScrollReveal({
+                            reset: true,
+                            distance: "60px",
+                            duration: 2500,
+                            delay: 400
+                        });
+
+                        ScrollReveal().reveal('.content5-2', { delay: 1000, origin: 'left' });
+                        ScrollReveal().reveal('.formtext', { delay: 1500 });
+
+                    </script>
+
+                </div>
+            </div>
+
+            <div id="ee">
+
+                <div class="rect" id="green">
+                    <div class="headline" style="text-align: center; margin-top: 10%;">
+                        <h1 style="font-family: 'Noto Serif TC', serif">阿咪咩動物攝影剪輯</h1>
+
+                        <h4 style="font-family: 'Noto Serif TC', serif">地址：中華路二段55號</h4>
+                        <h4 style="font-family: 'Noto Serif TC', serif">電話：0934-567-456</h4>
+                        <h4 style="font-family: 'Noto Serif TC', serif">郵箱：Amimei@gmail.com</h4>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>>
+
+
+
+    </div>
+
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() < $("#green").height()) {
+                    $(".navbar").removeClass("bg-dark");
+                }
+                else {
+                    $(".navbar").addClass("bg-dark");
+                }
+            });
+        });
+        // 下面下面是sticky函數
+
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
